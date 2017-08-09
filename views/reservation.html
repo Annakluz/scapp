@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Scapp</title>
+    <link rel="icon"  sizes="16x16"  href="../assets/img/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/css/uikit.min.css"/>
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body>
+    <header uk-sticky="animation: uk-animation-slide-top">
+      <nav class="uk-padding-small color-blue" uk-navbar="mode: click">
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" href="home.html"><img src="" alt="logo"></a>
+        </div>
+        <div class="uk-navbar-right">
+          <div>
+              <a class="uk-navbar-toggle  text-white" uk-search-icon href="#"></a>
+              <div class="uk-drop" uk-drop="mode: click; pos: left-center; offset: 0">
+                  <form class="uk-search uk-search-navbar uk-width-1-1">
+                      <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
+                  </form>
+              </div>
+          </div>
+          <ul class="uk-navbar-nav uk-iconnav">
+            <li><a href="#">Contacto</a></li>
+            <li>
+              <a title="Cerrar Sesión" uk-tooltip="pos: bottom" href="#" uk-icon="icon: user" ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="uk-flex uk-flex-center color-gray">
+          <ul class="uk-subnav uk-subnav-divider">
+              <li><a href="reservacion.html">Reservaciones</a></li>
+              <li><a href="factura.html">Facturas</a></li>
+              <li>
+                  <a href="#">Perfil<span uk-icon="icon:  triangle-down"></span></a>
+                  <div uk-dropdown="mode: click;">
+                      <ul class="uk-nav uk-navbar-dropdown-nav">
+                          <li class="uk-active"><a href="#"></a></li>
+                          <li><a href="datos.html">Datos</a></li>
+                          <li><a href="experiencias.html">Experiecias</a></li>
+                          <li><a href="#">Convenio</a></li>
+                      </ul>
+                  </div>
+              </li>
+              <li><a href="preguntas.html">Preguntas</a></li>
+          </ul>
+      </section>
+    </header>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit-icons.min.js"></script>
+  </body>
+</html>
