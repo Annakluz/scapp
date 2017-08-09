@@ -1,0 +1,19 @@
+.home-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+.slider-container{
+    display:flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate linear;
+}
+
+.item {
+    list-style: none;
+}
+
+.item img{
+    width: 100%;
+}
