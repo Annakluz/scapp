@@ -11,7 +11,7 @@
   .container-footer a {
     text-decoration: none; }
   .container-footer a:hover {
-    color: #FF671F; }
+    color:#01aab6; }
 
 .list-container, .newsletter-container {
   margin-top: 3vh; }
@@ -24,3 +24,18 @@
 
 .tel {
   color: darkgray; }
+
+@media only screen and (max-width: 420px) {
+    .container-footer{
+        grid-template-columns: 1fr;
+        text-align: center;
+        grid-template-rows: auto;
+        margin-top: 3vh;
+        
+    }
+    
+  
+    }
+    
+    
+    
