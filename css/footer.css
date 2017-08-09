@@ -1,0 +1,26 @@
+.container-footer {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-rows: 30vh;
+  margin-top: 10vh;
+  font-size: .8rem; }
+  .container-footer li {
+    text-decoration: none;
+    list-style: none; }
+  .container-footer a {
+    text-decoration: none; }
+  .container-footer a:hover {
+    color: #FF671F; }
+
+.list-container, .newsletter-container {
+  margin-top: 3vh; }
+
+.rss-btn {
+  font-size: .5rem; }
+
+.social-media a {
+  color: darkgray; }
+
+.tel {
+  color: darkgray; }
