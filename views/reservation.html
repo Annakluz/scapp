@@ -5,53 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Scapp</title>
-    <link rel="icon"  sizes="16x16"  href="../assets/img/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/css/uikit.min.css"/>
     <link rel="stylesheet" href="../css/main.css">
   </head>
   <body>
+<!-- NAVBAR -->
     <header uk-sticky="animation: uk-animation-slide-top">
       <nav class="uk-padding-small color-blue" uk-navbar="mode: click">
         <div class="uk-navbar-left">
           <a class="uk-navbar-item uk-logo" href="home.html"><img src="" alt="logo"></a>
         </div>
         <div class="uk-navbar-right">
-          <div>
-              <a class="uk-navbar-toggle  text-white" uk-search-icon href="#"></a>
-              <div class="uk-drop" uk-drop="mode: click; pos: left-center; offset: 0">
-                  <form class="uk-search uk-search-navbar uk-width-1-1">
-                      <input class="uk-search-input" type="search" placeholder="Search..." autofocus>
-                  </form>
-              </div>
-          </div>
-          <ul class="uk-navbar-nav uk-iconnav">
-            <li><a href="#">Contacto</a></li>
-            <li>
-              <a title="Cerrar Sesión" uk-tooltip="pos: bottom" href="#" uk-icon="icon: user" ></a>
-            </li>
+          <ul class="uk-navbar-nav">
+              <li>
+                <a href="#modal-search" uk-toggle uk-search-icon></a>
+              </li>
+              <li><a class="text-white" href="#">Contacto</a></li>
+              <li>
+                <div class="img-size-nav">
+                   <img class="uk-border-circle" src="../assets/img/scapp_logo.jpg">
+                </div>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li><a href="#modal-SetupAccount" uk-toggle>Configuración de cuenta</a></li>
+                        <li><a href="#">Ayuda</a></li>
+                        <li class="uk-nav-divider"></li>
+                        <li><a href="#">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+              </li>
           </ul>
         </div>
       </nav>
-      <section class="uk-flex uk-flex-center color-gray">
-          <ul class="uk-subnav uk-subnav-divider">
-              <li><a href="reservacion.html">Reservaciones</a></li>
-              <li><a href="factura.html">Facturas</a></li>
-              <li>
-                  <a href="#">Perfil<span uk-icon="icon:  triangle-down"></span></a>
-                  <div uk-dropdown="mode: click;">
-                      <ul class="uk-nav uk-navbar-dropdown-nav">
-                          <li class="uk-active"><a href="#"></a></li>
-                          <li><a href="datos.html">Datos</a></li>
-                          <li><a href="experiencias.html">Experiecias</a></li>
-                          <li><a href="#">Convenio</a></li>
-                      </ul>
-                  </div>
-              </li>
-              <li><a href="preguntas.html">Preguntas</a></li>
-          </ul>
-      </section>
     </header>
 
+<!-- MODAL SEARCH -->
+    <section id="modal-search" uk-modal >
+        <div class="uk-modal-body transparent">
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+          <form class="uk-search uk-search-default uk-margin uk-align-center">
+              <span uk-search-icon></span>
+              <input class="uk-search-input" type="search" placeholder="Nueva aventura...">
+          </form>
+          <div class="uk-child-width-1-3@m" uk-grid>
+            <div>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="../assets/img/scapp_logo.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Media Top</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Media Bottom</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div class="uk-card-media-bottom">
+                        <img src="../assets/img/scapp_logo.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img src="../assets/img/scapp_logo.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Media Top</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+<!-- MODAL Setup Account-->
+    <section id="modal-SetupAccount" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+          <h2 class="uk-modal-title uk-text-center ">Configuración de cuenta</h2>
+          <div class="uk-text-center uk-margin-medium-bottom">
+            <div class="uk-inline-clip uk-transition-toggle uk-light">
+                <img class="uk-border-circle" src="../assets/img/scapp_logo.jpg">
+                <div class="uk-position-center">
+                    <span class="uk-transition-fade text-gray" uk-icon="icon: file-edit; ratio: 2"></span>
+                </div>
+            </div>
+          </div>
+          <form class=" uk-text-center">
+              <div class="uk-margin">
+                  <div class="uk-inline">
+                      <span class="uk-form-icon" uk-icon="icon: user"></span>
+                      <input class="uk-input" type="text" placeholder="Nombre">
+                  </div>
+              </div>
+              <div class="uk-margin">
+                  <div class="uk-inline">
+                      <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                      <input class="uk-input" type="text" placeholder="Email">
+                  </div>
+              </div>
+              <div class="uk-margin">
+                  <div class="uk-inline">
+                      <span class="uk-form-icon" uk-icon="icon: phone"></span>
+                      <input class="uk-input"  placeholder="Teléfono">
+                  </div>
+              </div>
+          </form>
+          <div class="uk-text-center uk-margin-medium">
+              <button class="uk-button " type="button">Actualizar</button>
+              <button class="uk-button uk-modal-close" type="button">Cancelar</button>
+          </div>
+        </div>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit.min.js"></script>

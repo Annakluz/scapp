@@ -34,3 +34,23 @@ body{
 .text-lightGray{
   color: #838783;
 }
+
+/*NAVBAR*/
+header{
+  border-bottom: 8px solid #97c626;
+}
+.uk-navbar-nav>li>a, .uk-navbar-dropdown-nav>li>a{
+  color: white;
+}
+.uk-navbar-dropdown{
+  background-color: #4f544f;
+  min-width: 0;
+}
+.img-size-nav{
+   width: 40px;
+   /*height: 40px;*/
+   margin-top: 20%;
+}
+.transparent{
+  background: transparent;
+}
