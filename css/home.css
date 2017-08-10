@@ -37,8 +37,15 @@
 
 @media only screen and (max-width: 420px){
     .home.container{
-        margin-bottom: -20vh;
+        margin-bottom: -30vh;
     }
+    .slider-container{
+    display:flex;
+    padding: 0;
+    width: 305%;
+    height: 85%;
+    animation: slide 20s infinite alternate linear;
 }
-
+ 
+}
 
