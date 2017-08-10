@@ -9,7 +9,7 @@ body{
 #container-login{
   background-color: rgba(255,255,255,0.5);
   padding: 30px;
-  width: 80%;
+  width: 65%;
   height: 70%;
   margin-top: 10%;
 }
@@ -21,6 +21,11 @@ body{
   width:50vw;
   max-width: 250px;
   min-width: 50px;
+}
+#login:hover{
+  background: transparent;
+  border: 1px solid #4f544f;
+  color: #4f544f;
 }
 @media (max-width: 450px) {
   #logo-index{

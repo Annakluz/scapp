@@ -3,7 +3,7 @@
     grid-template-columns: 1fr;
     grid-template-rows:90vh;
     margin-bottom: -15vh
-    
+
 }
 .slider-container{
     display:flex;
@@ -22,16 +22,20 @@
     height: 100%
 }
 
+.uk-card{
+  border: 2px solid rgb(212, 211, 211);
+}
+
 @keyframes slide {
     0% {margin-left: 0;}
 	25% {margin-left: 0;}
-	
+
 	35% {margin-left: -102%;}
 	60% {margin-left: -102%;}
-	
+
 	70% {margin-left: -205%;}
 	100% {margin-left: -205%;}
-	
+
 
 }
 
@@ -46,8 +50,5 @@
     height: 85%;
     animation: slide 20s infinite alternate linear;
 }
- 
+
 }
-
-
-
