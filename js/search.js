@@ -19,6 +19,7 @@ var cargarPagina = function () {
   db.on('value', function (snap) {
     var tours = snap.val();
     var plantillaFinal = "";
+    var plantillaFinal2="";
     console.log(tours);
     $.each(tours, function (key, obj) {
       
@@ -29,12 +30,14 @@ var cargarPagina = function () {
        });
     function mostrarTour (tour) {
 
-      
+      var locBusqueda = $("#buscar-tour");
       var articleTours = $("#tour-mostrar");
       plantillaFinal += plantillaTour.replace("__nombre__",tour.nombre).replace("__fecha__",tour.fecha)
       .replace("__descripcion__",tour.descripcion).replace("__imagen__",tour.imagen);
-      console.log(plantillaFinal);
-      
+      plantillaFinal2 += plantillaBusqueda.replace("__nombre__",tour.nombre)
+      .replace("__descripcion__",tour.descripcion).replace("__imagen__",tour.imagen);
+      console.log(plantillaFinal2);
+      locBusqueda.html(plantillaFinal2);
       articleTours.html(plantillaFinal);
       }
 
@@ -59,6 +62,18 @@ var cargarPagina = function () {
         '<a href="#" class="uk-button uk-button-text">Read more</a>'+
     '</div>'+
 '</div>';
+var plantillaBusqueda = 
+              '<div>'+
+                  '<div class="uk-card uk-card-hover uk-card-default">'+
+                      '<div class="uk-card-media-top uk-text-center uk-padding">'+
+                          '<img src="__imagen__" alt="tours">'+
+                      '</div>'+
+                     ' <div class="uk-card-body">'+
+                          '<h3 class="uk-card-title">__nombre__</h3>'+
+                          '<p>__descripcion__</p>'+
+                      '</div>'+
+                  '</div>'+
+              '</div>';
 
     
 					
