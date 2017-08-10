@@ -1,0 +1,18 @@
+body{
+  margin-top: 0px;
+  height: 100vh;
+  background-image: url("https://pixabay.com/get/ef36b30c21f01c22d9584518a33219c8b66ae3d019b3124396f8c07d/ipad-632394_1920.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#container-login{
+  background-color: rgba(255,255,255,0.5);
+  padding: 30px;
+  width: 80%;
+  height: 70vh;
+  margin-top: 10%;
+}
+.impiar{
+  clear:both;
+  margin-bottom:2%; 
+}

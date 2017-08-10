@@ -1,6 +1,8 @@
 body{
+  margin-top: 0px;
   font-family: 'Dosis', sans-serif;
 }
+
 .color-green{
   background-color: #97c626;
 }
