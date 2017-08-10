@@ -1,6 +1,6 @@
 
 var cargarPagina = function () {
-   
+  btnRegistro.click(registro); 
   
 };
   // Initialize Firebase
@@ -13,6 +13,26 @@ var cargarPagina = function () {
     messagingSenderId: "437272620630"
   };
  firebase.initializeApp(config);
+ 
+  var btnRegistro = $("#continue");
+  var nombre = $("#name");
+  var correo = $("#email");
+  var pass = $("#password");
+  var confirPass = $("#passConfirm");
+
+function registro() {
+  event.preventDefault();
+  var email = correo.val();
+  var password = pass.val();
+  var auth = firebase.auth();
+
+  console.log(email);
+  // var promise = auth.signInWhitEmailAndPassword(email,password);
+  // promise.catch(function (e) {
+  //   console.log(e.message);
+  // });
+  
+}
 
   var db = firebase.database().ref().child('tours');
 
@@ -21,8 +41,7 @@ var cargarPagina = function () {
     var plantillaFinal = "";
     var plantillaFinal2="";
     console.log(tours);
-    $.each(tours, function (key, obj) {
-      
+    $.each(tours, function (key, obj,e) {
       console.log(obj.nombre);
       mostrarTour(obj);
 
@@ -37,7 +56,7 @@ var cargarPagina = function () {
       .replace("__descripcion__",tour.descripcion).replace("__imagen__",tour.imagen);
       plantillaFinal2 += plantillaBusqueda.replace("__nombre__",tour.nombre)
       .replace("__descripcion__",tour.descripcion).replace("__imagen__",tour.imagen);
-      console.log(plantillaFinal2);
+
       locBusqueda.html(plantillaFinal2);
       articleTours.html(plantillaFinal);
       recomendacionesTour.html(plantillaFinal2);
