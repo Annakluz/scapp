@@ -18,3 +18,22 @@
     clear:both;
     margin-bottom:2%;
   }
+  .margin-form {
+    margin-top:12%;
+  }
+
+  @media (max-width: 450px) {
+    .margin-form {
+      margin-top:8%;
+    }
+  }
+  @media (max-width: 800px) {
+    .margin-form {
+      margin-top:22%;
+    }
+  }
+  @media (max-width: 900px) and (orientation: landscape) {
+    .margin-form {
+      margin-top:2%;
+    }
+  }
