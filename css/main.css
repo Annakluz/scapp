@@ -81,8 +81,11 @@ header{
 .uk-search-input{
   border-bottom: 3px solid #97c626;
 }
-#modal-search .uk-card {
+#modal-search .uk-card, #tour-mostrar .uk-card{
   cursor: pointer;
+}
+#tour-mostrar .uk-card{
+  border: 2px solid rgb(212, 211, 211);
 }
 .uk-comment-avatar{
   width: 80px;
@@ -109,7 +112,10 @@ header{
 }
 /*RESERVATION*/
 .limpiar{
-
   clear:both;
   margin-bottom:2%;
+}
+
+#people{
+  margin-top: -3%;
 }
