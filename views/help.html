@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Document</title>
+    <title>Preguntas</title>  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/css/uikit.min.css" />
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/help.css">
+    
+    
+
 </head>
 
 <body>
@@ -78,7 +81,7 @@
                             </div>
                           </div>
                         </li>
-                        <li class="uk-margin-bottom"><a href="../views/help.html"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Ayuda</a></li>
+                        <li class="uk-margin-bottom"><a href="#"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Ayuda</a></li>
                         <li class="uk-nav-divider"></li>
                         <li><a href="#">Cerrar Sesión</a></li>
                     </ul>
@@ -155,15 +158,62 @@
         </div>
       </div>
     </section>
-    <section class="home-container">
-        <ul class="slider-container">
-            <li class="item"><img src="../assets/img/mansiones-que-son-hoteles-01.jpg" alt=""></li>
-            <li class="item"><img src="../assets/img/vintage-nights-noche-retro-como-en-los-anos-30.jpg" alt=""></li>
-            <li class="item"><img src="../assets/img/Untitled-design-27.jpg" alt=""></li>
-        </ul>
-
+    
+    <section class="uk-width-xxlarge uk-align-center">
+        <h2 class="uk-heading-divider">Preguntas frecuentes</h2>
+        <article>
+            <ul uk-accordion>
+                <li class="uk-padding-small">
+                    <h3 class="uk-accordion-title">¿Cuáles son las <b>ventajas</b> de  <b class="text-orange">Scapp</b>?</h3>
+                    <div class="uk-accordion-content uk-padding-small">
+                        <p> La principal ventaja es que tienes todo un abanico de opciónes desde tu computadora y puedes compartir tus opiniones y conocer la de otros por medio de nuestra bitácora.</p>
+                    </div>
+                </li>
+                <li class="uk-padding-small">
+                    <h3 class="uk-accordion-title">¿Cómo  <b>puedo pagar</b>?</h3>
+                    <div class="uk-accordion-content uk-padding-small">
+                        <p>Por medio de deposito bancario, transferencia y paypal
+                        </p>
+                    </div>
+                </li>
+                <li class="uk-padding-small">
+                    <h3 class="uk-accordion-title">¿Cuánto tiempo es válido la <b>reservación</b>?</h3>
+                    <div class="uk-accordion-content uk-padding-small">
+                        <p>Dependiendo del tour y la disponibilidad.
+                        </p>
+                    </div>
+                </li>
+                <li class="uk-padding-small">
+                    <h3 class="uk-accordion-title">¿Puedo <b>cancelar</b> mi <b>reservacón</b>  </h3>
+                    <div class="uk-accordion-content uk-padding-small">
+                        <p>Puedes cancelar hasta un día hábil antes del tour.
+                        </p>
+                    </div>
+                </li>
+                <li class="uk-padding-small">
+                    <h3 class="uk-accordion-title">¿Como <b>compartir</b> los recuerdos y opiniones de <b>mis experiencias</b> ?</h3>
+                    <div class="uk-accordion-content uk-padding-small">
+                        <p>Puedes subir tu experiencia y tus opiniones a tu bitacora donde otros usuarios pueden verla.
+                        </p>
+                    </div>
+                </li>
+                <li class="uk-padding-small">
+                    <h3 class="uk-accordion-title">¿Cuánto <b>tiempo</b> tengo para pagar una  <b>reservación</b>?</h3>
+                    <div class="uk-accordion-content uk-padding-small">
+                        <p>Para evitar contratiempos se pide que la reservación sea pagada a mas tardar un día antes del evento.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <p class="uk-align-right uk-margin-medium-top">Contáctanos y resolveremos tus dudas
+                <a title="atencio@scaap.com.mx" uk-tooltip="pos: bottom" href="mailto:atencio@scapp.com.mx" class="uk-icon-button uk-margin-small-right color-blue text-white" uk-icon="icon: mail">
+                </a>
+            </p>
+        </article>
+        
     </section>
-     <footer class="color-gray container-footer">
+
+        <footer class="color-gray container-footer footer-help">
         <ul class="list-footer list-container">
             <li class="text-white">Scapp</li>
             <li><a href="" class="text-white">Home</a></li>
@@ -205,10 +255,8 @@
 
     </footer>
 
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit-icons.min.js"></script>
-
 </body>
 </html>
