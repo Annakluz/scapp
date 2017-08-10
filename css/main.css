@@ -58,3 +58,8 @@ header{
 .transparent{
   background: transparent;
 }
+
+/*RESERVATION*/
+.slider-container{
+    animation: slide 20s infinite alternate linear;
+}
