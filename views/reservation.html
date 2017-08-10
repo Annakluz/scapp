@@ -169,10 +169,51 @@
           </div>
           <p><b>UBICACIÓN:</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
           <p>DESCRIPCIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="uk-button color-green text-white uk-margin-large uk-align-right" type="button">Reservar</button>
+          <button class="uk-button color-green text-white uk-margin-large uk-align-right" type="button" uk-toggle="target: #modal-reservation"  >Reservar</button>
         </div>
       </div>
     </section>
+    <!-- MODAL RESERVATION -->
+    <section id="modal-reservation" uk-modal>
+	<div class="uk-modal-body transparent">
+		<button class="uk-modal-close-default" type="button" uk-close></button>
+
+		<form class="uk-grid-small text-white" uk-grid>
+			<div class="uk-width-1-2@s">
+				<input class="uk-input" type="text" placeholder="Nombre">
+			</div>
+			<div class="uk-width-1-2@s">
+				<input class="uk-input" type="text" placeholder="Email">
+			</div>
+			<div class="uk-width-1-2@s uk-margin-medium-top">
+				<input class="uk-input" type="text" placeholder="Teléfono">
+			</div>
+      <div class="uk-width-1-2@s ">
+        <label class="uk-form-label" for="form-horizontal-select">Número de Boletos</label>
+        <div class="uk-form-controls">
+            <select class="uk-select" id="form-horizontal-select">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select>
+        </div>
+    </div>
+      <div class="uk-width-1-2@s uk-margin-remove-vertical">
+        <label class="uk-form-label" for="form-horizontal-select">Seleccionar fecha</label>
+        <div class="uk-form-controls">
+            <select class="uk-select" id="form-horizontal-select">
+                <option>Fecha 1</option>
+                <option>fecha2</option>
+            </select>
+        </div>
+    </div>
+      <button class="uk-button color-green text-white uk-margin-medium uk-align-right" type="submit">Reservar</button>
+		</form>
+
+</section>
 
 <!-- COMMENT -->
     <section class="uk-comment uk-container uk-margin-large">
