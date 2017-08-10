@@ -2,11 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Scapp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" sizes="16x16" href="../assets/img/favicon-16x16.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+	<link href="../css/registro.css" rel="stylesheet">
+  <title>Scapp/Registro</title>
 </head>
-<body>
-  Registro
+<body class="uk-flex uk-flex-center registro-body">
+  <div id="container-registro">
+	<section class="uk-grid uk-child-width-1-2 uk-flex-center">
+    <form>
+         <input type="text" placeholder="Name" class="uk-input"><br>
+         <input type="text" placeholder="Email" class="uk-input uk-margin-top"><br>
+         <input type="text" placeholder="Password" class="uk-input uk-margin-top">
+         <input type="text" placeholder="Confirme Password" class="uk-input uk-margin-top">
+         <div>
+           <button class="uk-button color-green uk-width-1-1 uk-margin-small-bottom uk-margin-top" > Continuar</button>
+         </div>
+    </form>
+	</section>
+	<div class="limpiar"></div>
+</div>
+
+  <!--Jquery--->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!--Script--->
+  <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
 </body>
 </html>
