@@ -12,11 +12,15 @@
   <body>
 <!-- NAVBAR -->
     <header uk-sticky="animation: uk-animation-slide-top">
-      <nav class="uk-padding-small color-blue" uk-navbar="mode: click">
-        <div class="uk-navbar-left">
+      <nav class="uk-padding-small uk-padding-remove-bottom color-blue" uk-navbar="mode: click">
+        <a href="#" class="uk-button uk-hidden@s uk-visible@xs uk-padding-small uk-padding-remove-top"  uk-toggle="target: #offcanvas-nav">
+          <span uk-navbar-toggle-icon></span>
+          <span class="uk-margin-small-left">MENÚ</span>
+        </a>
+        <div class="uk-navbar-left uk-visible@s uk-hidden@xs">
           <a class="uk-navbar-item uk-logo img-size-logo" href="home.html"><img src="../assets/img/logo_blanco.png" alt="logo"></a>
         </div>
-        <div class="uk-navbar-right">
+        <div class="uk-navbar-right uk-visible@s uk-hidden@xs">
           <ul class="uk-navbar-nav">
               <li>
                 <a href="#modal-search" uk-toggle uk-search-icon></a>
@@ -28,11 +32,13 @@
                 </div>
                 <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
-                      <li>
+                      <li class="uk-margin-bottom">
                         <div class="uk-offcanvas-content">
-                            <a uk-toggle="target: #offcanvas-flip">Configuración de cuenta</a>
-                            <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
-                                <div class="uk-offcanvas-bar">
+                            <a uk-toggle="target: #offcanvas-flip" class="text-white ">
+                              <span class="uk-margin-small-right" uk-icon="icon: cog"></span>Configuración
+                            </a>
+                            <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true; mode: reveal">
+                                <div class="uk-offcanvas-bar color-gray">
                                     <button class="uk-offcanvas-close" type="button" uk-close></button>
                                     <h2 class="uk-modal-title uk-text-center ">Configuración de cuenta</h2>
                                     <div class="uk-text-center uk-margin-medium-bottom">
@@ -64,14 +70,13 @@
                                         </div>
                                     </form>
                                     <div class="uk-text-center uk-margin-medium">
-                                        <button class="uk-button " type="button">Actualizar</button>
-                                        <button class="uk-button uk-modal-close" type="button">Cancelar</button>
+                                        <button class="uk-button color-green" type="button">Actualizar</button>
                                     </div>
                                 </div>
                             </div>
                           </div>
                         </li>
-                        <li><a href="#">Ayuda</a></li>
+                        <li class="uk-margin-bottom"><a href="#"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Ayuda</a></li>
                         <li class="uk-nav-divider"></li>
                         <li><a href="#">Cerrar Sesión</a></li>
                     </ul>
@@ -86,41 +91,41 @@
     <section id="modal-search" uk-modal >
         <div class="uk-modal-body transparent">
           <button class="uk-modal-close-default" type="button" uk-close></button>
-          <form class="uk-search uk-search-default uk-margin uk-align-center">
-              <span uk-search-icon></span>
-              <input class="uk-search-input" type="search" placeholder="Nueva aventura...">
+          <form class="uk-search uk-search-large uk-margin-large uk-align-center text-white">
+              <span uk-search-icon class="text-white"></span>
+              <input class="uk-search-input text-white" type="search" placeholder="Nueva aventura...">
           </form>
           <div class="uk-child-width-1-3@m" uk-grid>
             <div>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
+                    <div class="uk-card-media-top uk-text-center uk-padding">
                         <img src="../assets/img/scapp_logo.jpg" alt="">
                     </div>
                     <div class="uk-card-body">
-                        <h3 class="uk-card-title">Media Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        <h3 class="uk-card-title">Nombre del evento</h3>
+                        <p>DESCRIPCIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Media Bottom</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                    <div class="uk-card-media-bottom">
+                    <div class="uk-card-media-top uk-text-center uk-padding">
                         <img src="../assets/img/scapp_logo.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Media Top</h3>
+                        <p>DESCRIPCIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                     </div>
                 </div>
             </div>
             <div>
                 <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
+                    <div class="uk-card-media-top uk-text-center uk-padding">
                         <img src="../assets/img/scapp_logo.jpg" alt="">
                     </div>
                     <div class="uk-card-body">
                         <h3 class="uk-card-title">Media Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        <p>DESCRIPCIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                     </div>
                 </div>
             </div>
@@ -128,11 +133,25 @@
       </div>
     </section>
 
-    <!-- MODAL Setup Account-->
-    <section id="modal-SetupAccount" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body">
-
+<!--NAVBAR MOBILE -->
+    <section>
+      <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar color-gray">
+          <div class="uk-text-center uk-margin-top">
+             <img class="uk-border-circle img-size-nav" src="../assets/img/scapp_logo.jpg">
+          </div>
+          <ul class="uk-nav uk-nav-default uk-padding">
+            <li><a href="#modal-search" uk-toggle><span class="uk-margin-small-right" uk-icon="icon: search"></span>Buscar aventura</a></li>
+            <li class="uk-parent">
+                <a href="#offcanvas-flip"><span class="uk-margin-small-right" uk-icon="icon: cog"></span>Configurar cuenta</a>
+            </li>
+            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Ayuda</a></li>
+            <li class="uk-margin-bottom">
+              <a href="#">Contacto</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
