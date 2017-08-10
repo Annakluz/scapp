@@ -1,6 +1,6 @@
 
 var cargarPagina = function () {
-  btnRegistro.click(registro); 
+  btnRegistroGo.click(ingresoGoogle);
   
 };
   // Initialize Firebase
@@ -13,29 +13,48 @@ var cargarPagina = function () {
     messagingSenderId: "437272620630"
   };
  firebase.initializeApp(config);
+
+ function ingresoGoogle() {
+
+   if(!firebase.auth().currentUser){    
+    var provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('https://www.googleapis.com/auth/plus.login');
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+
+    var token = result.credential.accessToken;
+    var user = result.user;
+    console.log(user);
+    location.href = "views/home.html";  
+
+    }).catch(function(error) {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    var email = error.email;
+    var credential = error.credential;
+    if (errorCode==='auth/account-exisst-with-diferent-credential') {
+        alert("es el mismo usuario")
+    }
+    });
+   }else{
+       firebase.auth.signOut();
+   }
+ }
+
+  
+
  
   var btnRegistro = $("#continue");
+  var btnRegistroGo = $(".go-login");
   var nombre = $("#name");
   var correo = $("#email");
   var pass = $("#password");
   var confirPass = $("#passConfirm");
-
-function registro() {
-  event.preventDefault();
+  var name = nombre.val();
   var email = correo.val();
   var password = pass.val();
   var auth = firebase.auth();
 
-  console.log(email);
-  // var promise = auth.signInWhitEmailAndPassword(email,password);
-  // promise.catch(function (e) {
-  //   console.log(e.message);
-  // });
-  
-}
-
-  var db = firebase.database().ref().child('tours');
-
+var db = firebase.database().ref().child('tours');
   db.on('value', function (snap) {
     var tours = snap.val();
     var plantillaFinal = "";
