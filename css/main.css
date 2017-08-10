@@ -65,14 +65,15 @@ header{
   color: #01aab6;
   text-decoration: none;
 }
-#offcanvas-flip .uk-button, #detailEvent .uk-button {
+#offcanvas-flip .uk-button, #detailEvent .uk-button, .test-upload .uk-button {
   border-radius: 3px;
   border: 1px solid #97c626;
 }
-#detailEvent .uk-button:hover{
+#detailEvent .uk-button:hover, .test-upload>.uk-button:hover{
   background: transparent;
   border: 1px solid #4f544f;
   color: #4f544f;
+  cursor: pointer;
 }
 #offcanvas-flip .uk-button:hover{
   background: transparent;
