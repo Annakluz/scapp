@@ -48,8 +48,10 @@ header{
 }
 .img-size-nav{
    width: 40px;
-   /*height: 40px;*/
    margin-top: 20%;
+}
+.img-size-logo{
+  width: 40%;
 }
 .transparent{
   background: transparent;
