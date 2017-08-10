@@ -1,4 +1,8 @@
 
+var cargarPagina = function () {
+   
+  
+};
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBeLn8IzPrOcpTviCxdy3id3xgyoa-2fXo",
@@ -8,22 +12,54 @@
     storageBucket: "scapp-87484.appspot.com",
     messagingSenderId: "437272620630"
   };
-  firebase.initializeApp(config);
+ firebase.initializeApp(config);
 
   var db = firebase.database().ref().child('tours');
 
   db.on('value', function (snap) {
-     var nombre = snap.val().tour1.nombre;
-     var fecha = snap.val().tour1.fecha;
-     var descripcion = snap.val().tour1.descripcion;
-     var dirImg = snap.val().tour1.imagen;
-     var lugarDescrip = document.getElementById("descrip");
-     var lugar = document.getElementById("tours");
-     var lugarFecha = document.getElementById("fecha");
-     var imgTour=document.getElementById("img-tour");
-     lugar.innerText = nombre;
-     lugarFecha.innerText = fecha;
-     lugarDescrip.innerText = descripcion;
-     imgTour.setAttribute("src", dirImg);
-     
+    var tours = snap.val();
+    var plantillaFinal = "";
+    console.log(tours);
+    $.each(tours, function (key, obj) {
+      
+      console.log(obj.nombre);
+      mostrarTour(obj);
+
+
+       });
+    function mostrarTour (tour) {
+
+      
+      var articleTours = $("#tour-mostrar");
+      plantillaFinal += plantillaTour.replace("__nombre__",tour.nombre).replace("__fecha__",tour.fecha)
+      .replace("__descripcion__",tour.descripcion).replace("__imagen__",tour.imagen);
+      console.log(plantillaFinal);
+      
+      articleTours.html(plantillaFinal);
+      }
+
   });
+    var plantillaTour = 
+    '<div class="uk-card uk-card-default uk-width-1-2@m">'+
+   ' <div class="uk-card-header">'+
+       ' <div class="uk-grid-small uk-flex-middle" uk-grid>'+
+            '<div class="uk-width-auto">'+
+                '<img  width="140" height="140" src="__imagen__">'+
+            '</div>'+
+            '<div class="uk-width-expand">'+
+                '<h3 class="uk-card-title uk-margin-remove-bottom">__nombre__</h3>'+
+                '<p class="uk-text-meta uk-margin-remove-top">__fecha__</p>'+
+           ' </div>'+
+        '</div>'+
+    '</div>'+
+    '<div class="uk-card-body">'+
+       ' <p>__descripcion__</p>'+
+    '</div>'+
+   ' <div class="uk-card-footer">'+
+        '<a href="#" class="uk-button uk-button-text">Read more</a>'+
+    '</div>'+
+'</div>';
+
+    
+					
+      $(document).ready(cargarPagina);
