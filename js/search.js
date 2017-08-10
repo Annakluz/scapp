@@ -32,6 +32,7 @@ var cargarPagina = function () {
 
       var locBusqueda = $("#buscar-tour");
       var articleTours = $("#tour-mostrar");
+      var recomendacionesTour = $("#recomendaciones-tour");
       plantillaFinal += plantillaTour.replace("__nombre__",tour.nombre).replace("__fecha__",tour.fecha)
       .replace("__descripcion__",tour.descripcion).replace("__imagen__",tour.imagen);
       plantillaFinal2 += plantillaBusqueda.replace("__nombre__",tour.nombre)
@@ -39,6 +40,7 @@ var cargarPagina = function () {
       console.log(plantillaFinal2);
       locBusqueda.html(plantillaFinal2);
       articleTours.html(plantillaFinal);
+      recomendacionesTour.html(plantillaFinal2);
       }
 
   });
