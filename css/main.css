@@ -87,3 +87,7 @@ header{
   height: 80px;
 }
 /*RESERVATION*/
+.limpiar{
+  clear:both;
+  margin-bottom:2%;
+}

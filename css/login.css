@@ -22,3 +22,29 @@ body{
   max-width: 250px;
   min-width: 50px;
 }
+@media (max-width: 450px) {
+  #logo-index{
+    width:20vw;
+    max-width: 80px;
+    min-width: 50px;
+  }
+  #container-login{
+    height: 90vh;
+  }
+  body{
+    height: 100%;
+  }
+}
+@media (max-width: 900px) and (orientation: landscape) {
+  body{
+    height: 100%;
+  }
+}
+
+@media (max-width: 1800px) and (orientation: landscape) {
+  #logo-index{
+    width:20vw;
+    max-width: 120px;
+    min-width: 50px;
+  }
+}
