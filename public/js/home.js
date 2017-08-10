@@ -1,4 +1,11 @@
 var cargarPagina = function () {
+    
+        $(document).on("click","#recomendaciones-tour",function () {
+        location.href= "../views/search.html"
+        console.log("hola");
+
+    //   localStorage.setItem("lastname", "Smith");
+  });
 
 };
 
