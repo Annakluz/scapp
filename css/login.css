@@ -1,8 +1,14 @@
 body{
   margin-top: 0px;
+<<<<<<< HEAD
   height: 100%;
   background-image: url("https://pixabay.com/get/ef36b30c21f01c22d9584518a33219c8b66ae3d019b3124396f8c07d/ipad-632394_1920.jpg");
   background-size:cover;
+=======
+  height: 100vh;
+  background-image: url("../assets/img/fondo_login.jpg");
+  background-size: cover;
+>>>>>>> upstream/master
   background-repeat: no-repeat;
   background-position: center;
 }

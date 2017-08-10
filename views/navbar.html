@@ -8,7 +8,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/css/uikit.min.css"/>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/footer.css">
   </head>
   <body>
 <!-- NAVBAR -->
@@ -29,7 +28,49 @@
                 </div>
                 <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li><a href="#modal-SetupAccount" uk-toggle>Configuración de cuenta</a></li>
+                      <li>
+                        <div class="uk-offcanvas-content">
+                            <a uk-toggle="target: #offcanvas-flip">Configuración de cuenta</a>
+                            <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true">
+                                <div class="uk-offcanvas-bar">
+                                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+                                    <h2 class="uk-modal-title uk-text-center ">Configuración de cuenta</h2>
+                                    <div class="uk-text-center uk-margin-medium-bottom">
+                                      <div class="uk-inline-clip uk-transition-toggle uk-light">
+                                          <img class="uk-border-circle" src="../assets/img/scapp_logo.jpg">
+                                          <div class="uk-position-center">
+                                              <span class="uk-transition-fade text-gray" uk-icon="icon: file-edit; ratio: 2"></span>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <form class=" uk-text-center">
+                                        <div class="uk-margin">
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                                <input class="uk-input" type="text" placeholder="Nombre">
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin">
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                                                <input class="uk-input" type="text" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin">
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon" uk-icon="icon: phone"></span>
+                                                <input class="uk-input"  placeholder="Teléfono">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="uk-text-center uk-margin-medium">
+                                        <button class="uk-button " type="button">Actualizar</button>
+                                        <button class="uk-button uk-modal-close" type="button">Cancelar</button>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </li>
                         <li><a href="#">Ayuda</a></li>
                         <li class="uk-nav-divider"></li>
                         <li><a href="#">Cerrar Sesión</a></li>
@@ -90,87 +131,9 @@
     <!-- MODAL Setup Account-->
     <section id="modal-SetupAccount" uk-modal>
         <div class="uk-modal-dialog uk-modal-body">
-          <h2 class="uk-modal-title uk-text-center ">Configuración de cuenta</h2>
-          <div class="uk-text-center uk-margin-medium-bottom">
-            <div class="uk-inline-clip uk-transition-toggle uk-light">
-                <img class="uk-border-circle" src="../assets/img/scapp_logo.jpg">
-                <div class="uk-position-center">
-                    <span class="uk-transition-fade text-gray" uk-icon="icon: file-edit; ratio: 2"></span>
-                </div>
-            </div>
-          </div>
-          <form class=" uk-text-center">
-              <div class="uk-margin">
-                  <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: user"></span>
-                      <input class="uk-input" type="text" placeholder="Nombre">
-                  </div>
-              </div>
-              <div class="uk-margin">
-                  <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                      <input class="uk-input" type="text" placeholder="Email">
-                  </div>
-              </div>
-              <div class="uk-margin">
-                  <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: phone"></span>
-                      <input class="uk-input"  placeholder="Teléfono">
-                  </div>
-              </div>
-          </form>
-          <div class="uk-text-center uk-margin-medium">
-              <button class="uk-button " type="button">Actualizar</button>
-              <button class="uk-button uk-modal-close" type="button">Cancelar</button>
-          </div>
-        </div>
-    </section>
 
-    <section class="uk-container">
-      <h2>Nombre Evento</h2>
-      
-    </section>
-<!-- FOOTER -->
-    <footer class="color-gray container-footer">
-        <ul class="list-footer list-container">
-            <li class="text-white">Scapp</li>
-            <li><a href="" class="text-white">Home</a></li>
-            <li><a href="" class="text-white">¿Quienes Somos?</a></li>
-            <li><a href="#" class="text-white">¿Como funciona?</a></li>
-            <li><a href="#" class="text-white">Recibi un Kit</a></li>
-            <li><a href="#" class="text-white">Blog</a></li>
-        </ul>
-        <ul class="text-white">
-            <li class="text-white">SERVICIO AL CLIENTE</li>
-            <li><a class="text-white uk-text-meta">Preguntas Frecuentes</a></li>
-            <li><a class="text-white">Garantia de Servicio</a></li>
-            <li class="text-white uk-text-meta">POLITICAS</li>
-            <li><a class="text-white">Terminos y Condiciones</a></li>
-            <li><a class="text-white">Privacidad</a></li>
-        </ul>
-        <ul>
-            <li class="text-white">SOLUCIONES CORPORATIVAS</li>
-            <li><a href="" class="text-white">Regalos Corporativos</a></li>
-            <li><a href="" class="text-white">Cotiza tu iniciativa</a></li>
-            <li></li>
-        </ul>
-        <div>
-            <p class="text-white newsletter-container">Inscríbete a nuestro Newsletter para recibir grandes ideas...</p>
-            <input type="text">
-            <a href="#" class="uk-button uk-button-default button-style rss-btn uk-button-small">Suscríbete</a>
-            <div class="social-media">
-                <a href="" uk-icon="icon: twitter; ratio: 1.8"></a>
-                <a href="" uk-icon="icon: facebook; ratio: 1.8"></a>
-                <a href="" uk-icon="icon: linkedin; ratio: 1.8"></a>
-                <a href="" uk-icon="icon: youtube; ratio: 1.8"></a>
-                <a href="" uk-icon="icon: rss; ratio: 1.8"></a>
-            </div>
-            <div class="tel">
-                <span uk-icon="icon: phone"></span>
-                <span>5292 5707 / 01 55 5292-5407</span>
-            </div>
         </div>
-    </footer>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/js/uikit.min.js"></script>
