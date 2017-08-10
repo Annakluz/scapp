@@ -49,8 +49,9 @@ header{
   min-width: 0;
 }
 .img-size-nav{
-   width: 30%;
-   height: 30%;
+   width: 4vh;
+   margin-top: 30%;
+
 }
 .img-size-logo{
   width: 10vh;
@@ -62,17 +63,27 @@ header{
   color: #01aab6;
   text-decoration: none;
 }
-#offcanvas-flip .uk-button{
+#offcanvas-flip .uk-button, #detailEvent .uk-button {
   border-radius: 3px;
   border: 1px solid #97c626;
 }
+#detailEvent .uk-button:hover{
+  background: transparent;
+  border: 1px solid #4f544f;
+  color: #4f544f;
+}
 #offcanvas-flip .uk-button:hover{
-  border-radius: 3px;
   background: transparent;
   border: 1px solid white;
 }
 .uk-search-input{
   border-bottom: 3px solid #97c626;
 }
-
+#modal-search .uk-card {
+  cursor: pointer;
+}
+.uk-comment-avatar{
+  width: 80px;
+  height: 80px;
+}
 /*RESERVATION*/
