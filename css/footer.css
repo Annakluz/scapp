@@ -3,7 +3,7 @@
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 2fr;
   grid-template-rows: 30vh;
-  margin-top: 10vh;
+  margin-top: 0vh;
   font-size: .8rem; }
   .container-footer li {
     text-decoration: none;
