@@ -14,21 +14,24 @@
 </head>
 <body class="uk-flex uk-flex-center registro-body">
   <div id="container-registro">
-	<section class="uk-grid uk-child-width-1-2 uk-flex-center">
-    <form id="form" class="margin-form">
-         <input id="name" type="text" placeholder="Name" class="uk-input"><br>
-         <input id="email" type="email" placeholder="Email" class="uk-input uk-margin-top"><br>
-         <input id="password" type="text" placeholder="Password" class="uk-input uk-margin-top">
-         <input id="passConfirm"  type="text" placeholder="Confirme Password" class="uk-input uk-margin-top">
-         <div>
-           <a href="home.html">
-             <button id="continue" type="submit" class="uk-button color-green uk-width-1-1 uk-margin-small-bottom uk-margin-top text-white" > Continuar</button>
-          </a>
-         </div>
-    </form>
-	</section>
-	<div class="limpiar"></div>
-</div>
+    <div class="uk-heading-divider uk-align-center">
+      <h2 class=" uk-text-center uk-margin-remove-bottom text-gray"><b>Registro usuario</b></h2>
+    </div>
+  	<section class="uk-grid uk-child-width-1-2@s uk-flex-center uk-margin-large ">
+      <form id="form" class="">
+           <input id="name" type="text" placeholder="Nombre" class="uk-input"><br>
+           <input id="email" type="email" placeholder="Correo" class="uk-input uk-margin-top"><br>
+           <input id="password" type="password" placeholder="Contraseña" class="uk-input uk-margin-top">
+           <input id="passConfirm"  type="password" placeholder="Confirmar contraseña" class="uk-input uk-margin-top">
+           <div>
+             <a href="home.html" id="continue"  class="uk-button color-green uk-width-1-1 uk-margin-small-bottom uk-margin-top text-white">
+               Continuar
+            </a>
+           </div>
+      </form>
+  	</section>
+  	<div class="limpiar"></div>
+  </div>
 
   <!--Jquery--->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

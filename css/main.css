@@ -13,7 +13,7 @@ body{
   background-color: #635f5f;
 }
 .color-lightGray{
-  background: #838783;
+  background: #d4d9d8;
 }
 .color-google{
   background: #DB4337;
@@ -49,12 +49,14 @@ header{
   min-width: 0;
 }
 .img-size-nav{
-   width: 4vh;
-   margin-top: 30%;
-
+   width: 6vh;
+   margin-top: 50%;
+}
+.img-size-nav-mobile{
+   width: 12vh;
 }
 .img-size-logo{
-  width: 10vh;
+  width: 20vh;
 }
 .transparent{
   background: transparent;
@@ -86,8 +88,28 @@ header{
   width: 80px;
   height: 80px;
 }
+
+@media (max-width: 1024px) {
+  .img-size-nav{
+     width: 4vh;
+     margin-top: 20%;
+  }
+  .img-size-logo{
+    width: 10vh;
+  }
+}
+@media (max-width: 768px) {
+  .img-size-nav{
+     width: 4vh;
+     margin-top: 40%;
+  }
+  .img-size-logo{
+    width: 11vh;
+  }
+}
 /*RESERVATION*/
 .limpiar{
+
   clear:both;
   margin-bottom:2%;
 }

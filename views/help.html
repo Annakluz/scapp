@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Preguntas</title>  
+    <title>Preguntas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/css/uikit.min.css" />
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/help.css">
-    
-    
+
+
 
 </head>
 
@@ -30,7 +30,7 @@
               <li>
                 <a href="#modal-search" uk-toggle uk-search-icon></a>
               </li>
-              <li><a class="text-white" href="#">Contacto</a></li>
+              <li><a class="text-white" href="#footer">Contacto</a></li>
               <li>
                 <div class="img-size-nav">
                    <img class="uk-border-circle" src="../assets/img/avatar.jpg">
@@ -100,6 +100,9 @@
               <span uk-search-icon class="text-white"></span>
               <input class="uk-search-input text-white" type="search" placeholder="Nueva aventura...">
           </form>
+          <div class=" uk-align-center">
+            <h2 class=" uk-text-center uk-margin-remove-bottom text-white">Recomendaciones del mes</h2>
+          </div>
           <div class="uk-child-width-1-3@m" uk-grid>
             <div>
                 <div class="uk-card uk-card-hover uk-card-default">
@@ -140,27 +143,28 @@
 
 <!--NAVBAR MOBILE -->
     <section>
-      <div id="offcanvas-nav" uk-offcanvas="overlay: true">
-        <div class="uk-offcanvas-bar color-gray">
-          <div class="uk-text-center uk-margin-top">
-             <img class="uk-border-circle img-size-nav" src="../assets/img/avatar.jpg">
-          </div>
-          <ul class="uk-nav uk-nav-default uk-padding">
-            <li><a href="#modal-search" uk-toggle><span class="uk-margin-small-right" uk-icon="icon: search"></span>Buscar aventura</a></li>
-            <li class="uk-parent">
-                <a href="#offcanvas-flip"><span class="uk-margin-small-right" uk-icon="icon: cog"></span>Configurar cuenta</a>
-            </li>
-            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Ayuda</a></li>
-            <li class="uk-margin-bottom">
-              <a href="#">Contacto</a>
-            </li>
-          </ul>
+        <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar color-gray">
+                <div class="uk-text-center uk-margin-top">
+                    <img class="uk-border-circle img-size-nav-mobile" src="../assets/img/avatar.jpg">
+                </div>
+                <ul class="uk-nav uk-nav-default uk-padding">
+                    <li><a href="home.html"><span class="uk-margin-small-right" uk-icon="icon: home"></span>Inicio</a></li>
+                    <li><a href="#modal-search" uk-toggle><span class="uk-margin-small-right" uk-icon="icon: search"></span>Buscar aventura</a></li>
+                    <li class="uk-parent">
+                        <a href="#offcanvas-flip"><span class="uk-margin-small-right" uk-icon="icon: cog"></span>Configurar cuenta</a>
+                    </li>
+                    <li><a href="help.html"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Ayuda</a></li>
+                    <li class="uk-margin-bottom">
+                        <a href="#footer">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </section>
-    
+
     <section class="uk-width-xxlarge uk-align-center">
-        <h2 class="uk-heading-divider">Preguntas frecuentes</h2>
+        <h2 class="uk-heading-divider">Ayuda</h2>
         <article>
             <ul uk-accordion>
                 <li class="uk-padding-small">
@@ -210,10 +214,10 @@
                 </a>
             </p>
         </article>
-        
+
     </section>
 
-        <footer class="color-gray container-footer footer-help">
+    <footer id="footer"class="color-gray container-footer footer-help">
         <ul class="list-footer list-container">
             <li class="text-white">Scapp</li>
             <li><a href="" class="text-white">Home</a></li>
