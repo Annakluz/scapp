@@ -29,7 +29,7 @@ var cargarPagina = function () {
     var token = result.credential.accessToken;
     var user = result.user;
     console.log(user);
-    location.href = "views/home.html";  
+    location.href = "/public/views/home.html";  
 
     }).catch(function(error) {
     var errorCode = error.code;
