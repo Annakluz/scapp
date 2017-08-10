@@ -9,14 +9,18 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
+
 	<title>Scapp</title>
 </head>
 
-<body>
+<body class=" uk-flex uk-flex-center">
+	<div id="container-login" >
   <section id="logo-index">
-    <img src="assets/img/logo.png" alt="logo-Scapp" class="uk-align-center uk-margin-top">
+    <img src="assets/img/logo.png" alt="logo-Scapp" class="uk-align-center">
   </section>
-	<section class="uk-grid uk-flex-center">
+	<section class="uk-grid uk-child-width-1-2 uk-flex-center">
     <form>
          <input type="text" placeholder="Username or email" class="uk-input"><br>
          <input type="text" placeholder="Password" class="uk-input uk-margin-top">
@@ -25,11 +29,11 @@
          </div>
          <p class="uk-text-center">O</p>
          <div>
-             <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom fb-login">
+             <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom fb-login color-facebook text-white">
                <i class="fa fa-facebook-official" aria-hidden="true"></i> Login with Facebook
              </button>
 
-             <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom go-login">
+             <button class="uk-button uk-button-default uk-width-1-1 uk-margin-small-bottom go-login color-google text-white">
                <i class="fa fa-google-plus-official" aria-hidden="true"></i> Login with Google
              </button>
         </div>
@@ -38,7 +42,8 @@
         </div>
     </form>
 	</section>
-
+	<div class="limpiar"></div>
+</div>
 
 	<!--Jquery--->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
