@@ -13,11 +13,15 @@
   <body>
 <!-- NAVBAR -->
     <header uk-sticky="animation: uk-animation-slide-top">
-      <nav class="uk-padding-small color-blue" uk-navbar="mode: click">
-        <div class="uk-navbar-left">
+      <nav class="uk-padding-small uk-padding-remove-bottom color-blue" uk-navbar="mode: click">
+        <a href="#" class="uk-button uk-hidden@s uk-visible@xs uk-padding-small uk-padding-remove-top"  uk-toggle="target: #offcanvas-nav">
+          <span uk-navbar-toggle-icon></span>
+          <span class="uk-margin-small-left">MENÚ</span>
+        </a>
+        <div class="uk-navbar-left uk-visible@s uk-hidden@xs uk-padding-right">
           <a class="uk-navbar-item uk-logo img-size-logo" href="home.html"><img src="../assets/img/logo_blanco.png" alt="logo"></a>
         </div>
-        <div class="uk-navbar-right">
+        <div class="uk-navbar-right uk-visible@s uk-hidden@xs">
           <ul class="uk-navbar-nav">
               <li>
                 <a href="#modal-search" uk-toggle uk-search-icon></a>
@@ -25,12 +29,55 @@
               <li><a class="text-white" href="#">Contacto</a></li>
               <li>
                 <div class="img-size-nav">
-                   <img class="uk-border-circle" src="../assets/img/scapp_logo.jpg">
+                   <img class="uk-border-circle" src="../assets/img/avatar.jpg">
                 </div>
                 <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li><a href="#modal-SetupAccount" uk-toggle>Configuración de cuenta</a></li>
-                        <li><a href="#">Ayuda</a></li>
+                      <li class="uk-margin-bottom">
+                        <div class="uk-offcanvas-content">
+                            <a uk-toggle="target: #offcanvas-flip" class="text-white ">
+                              <span class="uk-margin-small-right" uk-icon="icon: cog"></span>Configuración
+                            </a>
+                            <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true; mode: reveal">
+                                <div class="uk-offcanvas-bar color-gray">
+                                    <button class="uk-offcanvas-close" type="button" uk-close></button>
+                                    <h2 class="uk-modal-title uk-text-center ">Configuración de cuenta</h2>
+                                    <div class="uk-text-center uk-margin-medium-bottom">
+                                      <div class="uk-inline-clip uk-transition-toggle uk-light">
+                                          <img class="uk-border-circle" src="../assets/img/avatar.jpg">
+                                          <div class="uk-position-center">
+                                              <span class="uk-transition-fade text-gray" uk-icon="icon: file-edit; ratio: 2"></span>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <form class=" uk-text-center">
+                                        <div class="uk-margin">
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                                                <input class="uk-input" type="text" placeholder="Nombre">
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin">
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                                                <input class="uk-input" type="text" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="uk-margin">
+                                            <div class="uk-inline">
+                                                <span class="uk-form-icon" uk-icon="icon: phone"></span>
+                                                <input class="uk-input"  placeholder="Teléfono">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="uk-text-center uk-margin-medium">
+                                        <button class="uk-button color-green" type="button">Actualizar</button>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="uk-margin-bottom"><a href="#"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Ayuda</a></li>
                         <li class="uk-nav-divider"></li>
                         <li><a href="#">Cerrar Sesión</a></li>
                     </ul>
@@ -45,41 +92,41 @@
     <section id="modal-search" uk-modal >
         <div class="uk-modal-body transparent">
           <button class="uk-modal-close-default" type="button" uk-close></button>
-          <form class="uk-search uk-search-default uk-margin uk-align-center">
-              <span uk-search-icon></span>
-              <input class="uk-search-input" type="search" placeholder="Nueva aventura...">
+          <form class="uk-search uk-search-large uk-margin-large uk-align-center text-white">
+              <span uk-search-icon class="text-white"></span>
+              <input class="uk-search-input text-white" type="search" placeholder="Nueva aventura...">
           </form>
           <div class="uk-child-width-1-3@m" uk-grid>
             <div>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
+                <div class="uk-card uk-card-hover uk-card-default">
+                    <div class="uk-card-media-top uk-text-center uk-padding">
                         <img src="../assets/img/scapp_logo.jpg" alt="">
                     </div>
                     <div class="uk-card-body">
-                        <h3 class="uk-card-title">Media Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        <h3 class="uk-card-title">Nombre del evento</h3>
+                        <p>DESCRIPCIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                     </div>
                 </div>
             </div>
             <div>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-body">
-                        <h3 class="uk-card-title">Media Bottom</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    </div>
-                    <div class="uk-card-media-bottom">
-                        <img src="../assets/img/scapp_logo.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div class="uk-card uk-card-default">
-                    <div class="uk-card-media-top">
+                <div class="uk-card uk-card-hover uk-card-default">
+                    <div class="uk-card-media-top uk-text-center uk-padding">
                         <img src="../assets/img/scapp_logo.jpg" alt="">
                     </div>
                     <div class="uk-card-body">
                         <h3 class="uk-card-title">Media Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                        <p>DESCRIPCIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-hover uk-card-default">
+                    <div class="uk-card-media-top uk-text-center uk-padding">
+                        <img src="../assets/img/scapp_logo.jpg" alt="">
+                    </div>
+                    <div class="uk-card-body">
+                        <h3 class="uk-card-title">Media Top</h3>
+                        <p>DESCRIPCIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                     </div>
                 </div>
             </div>
@@ -87,49 +134,82 @@
       </div>
     </section>
 
-    <!-- MODAL Setup Account-->
-    <section id="modal-SetupAccount" uk-modal>
-        <div class="uk-modal-dialog uk-modal-body">
-          <h2 class="uk-modal-title uk-text-center ">Configuración de cuenta</h2>
-          <div class="uk-text-center uk-margin-medium-bottom">
-            <div class="uk-inline-clip uk-transition-toggle uk-light">
-                <img class="uk-border-circle" src="../assets/img/scapp_logo.jpg">
-                <div class="uk-position-center">
-                    <span class="uk-transition-fade text-gray" uk-icon="icon: file-edit; ratio: 2"></span>
-                </div>
+<!--NAVBAR MOBILE -->
+    <section>
+      <div id="offcanvas-nav" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar color-gray">
+          <div class="uk-text-center uk-margin-top">
+             <img class="uk-border-circle img-size-nav" src="../assets/img/avatar.jpg">
+          </div>
+          <ul class="uk-nav uk-nav-default uk-padding">
+            <li><a href="#modal-search" uk-toggle><span class="uk-margin-small-right" uk-icon="icon: search"></span>Buscar aventura</a></li>
+            <li class="uk-parent">
+                <a href="#offcanvas-flip"><span class="uk-margin-small-right" uk-icon="icon: cog"></span>Configurar cuenta</a>
+            </li>
+            <li><a href="#"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Ayuda</a></li>
+            <li class="uk-margin-bottom">
+              <a href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+<!-- DETAIL -->
+    <section class="uk-container uk-margin-large" id="detailEvent">
+      <h1 class="text-gray">Nombre Evento</h1>
+      <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+        <div class="uk-align-center">
+          <img src="../assets/img/vintage-nights-noche-retro-como-en-los-anos-30.jpg" alt="">
+        </div>
+        <div>
+          <div class="uk-child-width-expand@s uk-margin-medium-top" uk-grid>
+            <p><b>FECHA:</b> 04/MAY/2017</p>
+            <p><b>COSTO:</b> $500.00</p>
+          </div>
+          <p><b>UBICACIÓN:</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+          <p>DESCRIPCIÓN: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <button class="uk-button color-green text-white uk-margin-large uk-align-right" type="button">Reservar</button>
+        </div>
+      </div>
+    </section>
+
+<!-- COMMENT -->
+    <section class="uk-comment uk-container uk-margin-large">
+        <article class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-comment-avatar" src="../assets/img/avatar.jpg" alt="people">
             </div>
-          </div>
-          <form class=" uk-text-center">
-              <div class="uk-margin">
-                  <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: user"></span>
-                      <input class="uk-input" type="text" placeholder="Nombre">
-                  </div>
-              </div>
-              <div class="uk-margin">
-                  <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                      <input class="uk-input" type="text" placeholder="Email">
-                  </div>
-              </div>
-              <div class="uk-margin">
-                  <div class="uk-inline">
-                      <span class="uk-form-icon" uk-icon="icon: phone"></span>
-                      <input class="uk-input"  placeholder="Teléfono">
-                  </div>
-              </div>
-          </form>
-          <div class="uk-text-center uk-margin-medium">
-              <button class="uk-button " type="button">Actualizar</button>
-              <button class="uk-button uk-modal-close" type="button">Cancelar</button>
-          </div>
+            <div class="uk-width-expand@s">
+                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Nombre</a></h4>
+                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                    <li><a href="#">Hace 12 días</a></li>
+                    <li><a href="#">Responder</a></li>
+                </ul>
+            </div>
+        </article>
+        <div class="uk-comment-body">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+    </section>
+    <section class="uk-comment uk-container uk-margin-large">
+        <article class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-comment-avatar" src="../assets/img/avatar.jpg" alt="people">
+            </div>
+            <div class="uk-width-expand@s">
+                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Nombre</a></h4>
+                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                    <li><a href="#">Hace 12 días</a></li>
+                    <li><a href="#">Responder</a></li>
+                </ul>
+            </div>
+        </article>
+        <div class="uk-comment-body">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
         </div>
     </section>
 
-    <section class="uk-container">
-      <h2>Nombre Evento</h2>
-      
-    </section>
 <!-- FOOTER -->
     <footer class="color-gray container-footer">
         <ul class="list-footer list-container">
