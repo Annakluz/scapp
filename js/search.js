@@ -1,7 +1,6 @@
 
 var cargarPagina = function () {
-
-
+  btnRegistroGo.click(ingresoGoogle);
 };
   // Initialize Firebase
   var config = {
@@ -14,14 +13,55 @@ var cargarPagina = function () {
   };
  firebase.initializeApp(config);
 
-  var db = firebase.database().ref().child('tours');
+ function ingresoGoogle() {
 
+   if(!firebase.auth().currentUser){    
+    var provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('https://www.googleapis.com/auth/plus.login');
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+
+    var token = result.credential.accessToken;
+    var user = result.user;
+    console.log(user);
+    location.href = "views/home.html";  
+
+    }).catch(function(error) {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    var email = error.email;
+    var credential = error.credential;
+    if (errorCode==='auth/account-exisst-with-diferent-credential') {
+        alert("es el mismo usuario")
+    }
+    });
+   }else{
+       firebase.auth.signOut();
+   }
+ }
+
+  
+
+ 
+  var btnRegistro = $("#continue");
+  var btnRegistroGo = $(".go-login");
+  var nombre = $("#name");
+  var correo = $("#email");
+  var pass = $("#password");
+  var confirPass = $("#passConfirm");
+  var name = nombre.val();
+  var email = correo.val();
+  var password = pass.val();
+  var auth = firebase.auth();
+
+var db = firebase.database().ref().child('tours');
   db.on('value', function (snap) {
     var tours = snap.val();
     var plantillaFinal = "";
     var plantillaFinal2="";
     console.log(tours);
-    $.each(tours, function (key, obj) {
+
+    $.each(tours, function (key, obj,e) {
+
 
       console.log(obj.nombre);
       mostrarTour(obj);
@@ -37,7 +77,7 @@ var cargarPagina = function () {
       .replace("__descripcion__",tour.descripcion).replace("__imagen__",tour.imagen);
       plantillaFinal2 += plantillaBusqueda.replace("__nombre__",tour.nombre)
       .replace("__descripcion__",tour.descripcion).replace("__imagen__",tour.imagen);
-      console.log(plantillaFinal2);
+
       locBusqueda.html(plantillaFinal2);
       articleTours.html(plantillaFinal);
       recomendacionesTour.html(plantillaFinal2);
