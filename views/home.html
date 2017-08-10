@@ -1,191 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/css/uikit.min.css" />
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/home.css">
-    <link rel="stylesheet" href="../css/footer.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.25/css/uikit.min.css" />
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/home.css">
+	<link rel="stylesheet" href="../css/footer.css">
 </head>
 
 <body>
-<!-- NAVBAR -->
-  <header uk-sticky="animation: uk-animation-slide-top">
-  <nav class="uk-padding-small uk-padding-remove-bottom color-blue" uk-navbar="mode: click">
-      <a href="#" class="uk-button uk-hidden@s uk-visible@xs uk-padding-small uk-padding-remove-top" uk-toggle="target: #offcanvas-nav">
-          <span uk-navbar-toggle-icon></span>
-          <span class="uk-margin-small-left">MENÚ</span>
-      </a>
-      <div class="uk-navbar-left uk-visible@s uk-hidden@xs uk-padding-right">
-          <a class="uk-navbar-item uk-logo img-size-logo" href="home.html"><img src="../assets/img/logo_blanco.png" alt="logo"></a>
-      </div>
-      <div class="uk-navbar-right uk-visible@s uk-hidden@xs">
-          <ul class="uk-navbar-nav">
-              <li>
-                  <a href="#modal-search" uk-toggle uk-search-icon></a>
-              </li>
-              <li><a class="text-white" href="#footer" >Contacto</a></li>
-              <li>
-                  <div class="img-size-nav">
-                      <img class="uk-border-circle" src="../assets/img/avatar.jpg">
-                  </div>
-                  <div class="uk-navbar-dropdown">
-                      <ul class="uk-nav uk-navbar-dropdown-nav">
-                          <li class="uk-margin-bottom">
-                              <div class="uk-offcanvas-content">
-                                  <a uk-toggle="target: #offcanvas-flip" class="text-white ">
-                                      <span class="uk-margin-small-right" uk-icon="icon: cog"></span>Configuración
-                                  </a>
-                                  <div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true; mode: reveal">
-                                      <div class="uk-offcanvas-bar color-gray">
-                                          <button class="uk-offcanvas-close" type="button" uk-close></button>
-                                          <h2 class="uk-modal-title uk-text-center ">Configuración de cuenta</h2>
-                                          <div class="uk-text-center uk-margin-medium-bottom">
-                                              <div class="uk-inline-clip uk-transition-toggle uk-light">
-                                                  <img class="uk-border-circle" src="../assets/img/avatar.jpg">
-                                                  <div class="uk-position-center">
-                                                      <span class="uk-transition-fade text-gray" uk-icon="icon: file-edit; ratio: 2"></span>
-                                                  </div>
-                                              </div>
-                                          </div>
-                                          <form class=" uk-text-center">
-                                              <div class="uk-margin">
-                                                  <div class="uk-inline">
-                                                      <span class="uk-form-icon" uk-icon="icon: user"></span>
-                                                      <input class="uk-input" type="text" placeholder="Nombre">
-                                                  </div>
-                                              </div>
-                                              <div class="uk-margin">
-                                                  <div class="uk-inline">
-                                                      <span class="uk-form-icon" uk-icon="icon: mail"></span>
-                                                      <input class="uk-input" type="text" placeholder="Email">
-                                                  </div>
-                                              </div>
-                                              <div class="uk-margin">
-                                                  <div class="uk-inline">
-                                                      <span class="uk-form-icon" uk-icon="icon: phone"></span>
-                                                      <input class="uk-input" placeholder="Teléfono">
-                                                  </div>
-                                              </div>
-                                          </form>
-                                          <div class="uk-text-center uk-margin-medium">
-                                              <button class="uk-button color-green" type="button">Actualizar</button>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </li>
-                          <li class="uk-margin-bottom"><a href="../views/help.html"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Ayuda</a></li>
-                          <li class="uk-nav-divider"></li>
-                          <li><a href="#">Cerrar Sesión</a></li>
-                      </ul>
-                  </div>
-              </li>
-          </ul>
-      </div>
-  </nav>
-</header>
+	<!-- NAVBAR -->
+	<header uk-sticky="animation: uk-animation-slide-top">
+		<nav class="uk-padding-small uk-padding-remove-bottom color-blue" uk-navbar="mode: click">
+			<a href="#" class="uk-button uk-hidden@s uk-visible@xs uk-padding-small uk-padding-remove-top" uk-toggle="target: #offcanvas-nav">
+				<span uk-navbar-toggle-icon></span>
+				<span class="uk-margin-small-left">MENÚ</span>
+			</a>
+			<div class="uk-navbar-left uk-visible@s uk-hidden@xs uk-padding-right">
+				<a class="uk-navbar-item uk-logo img-size-logo" href="home.html"><img src="../assets/img/logo_blanco.png" alt="logo"></a>
+			</div>
+			<div class="uk-navbar-right uk-visible@s uk-hidden@xs">
+				<ul class="uk-navbar-nav">
+					<li>
+						<a href="#modal-search" uk-toggle uk-search-icon></a>
+					</li>
+					<li><a class="text-white" href="#footer">Contacto</a></li>
+					<li>
+						<div class="img-size-nav">
+							<img class="uk-border-circle" src="../assets/img/avatar.jpg">
+						</div>
+						<div class="uk-navbar-dropdown">
+							<ul class="uk-nav uk-navbar-dropdown-nav">
+								<li class="uk-margin-bottom">
+									<div class="uk-offcanvas-content">
+										<a uk-toggle="target: #offcanvas-flip" class="text-white ">
+											<span class="uk-margin-small-right" uk-icon="icon: cog"></span>Configuración
+										</a>
+										<div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true; mode: reveal">
+											<div class="uk-offcanvas-bar color-gray">
+												<button class="uk-offcanvas-close" type="button" uk-close></button>
+												<h2 class="uk-modal-title uk-text-center ">Configuración de cuenta</h2>
+												<div class="uk-text-center uk-margin-medium-bottom">
+													<div class="uk-inline-clip uk-transition-toggle uk-light">
+														<img class="uk-border-circle" src="../assets/img/avatar.jpg">
+														<div class="uk-position-center">
+															<span class="uk-transition-fade text-gray" uk-icon="icon: file-edit; ratio: 2"></span>
+														</div>
+													</div>
+												</div>
+												<form class=" uk-text-center">
+													<div class="uk-margin">
+														<div class="uk-inline">
+															<span class="uk-form-icon" uk-icon="icon: user"></span>
+															<input class="uk-input" type="text" placeholder="Nombre">
+														</div>
+													</div>
+													<div class="uk-margin">
+														<div class="uk-inline">
+															<span class="uk-form-icon" uk-icon="icon: mail"></span>
+															<input class="uk-input" type="text" placeholder="Email">
+														</div>
+													</div>
+													<div class="uk-margin">
+														<div class="uk-inline">
+															<span class="uk-form-icon" uk-icon="icon: phone"></span>
+															<input class="uk-input" placeholder="Teléfono">
+														</div>
+													</div>
+												</form>
+												<div class="uk-text-center uk-margin-medium">
+													<button class="uk-button color-green" type="button">Actualizar</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="uk-margin-bottom"><a href="../views/help.html"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Ayuda</a></li>
+								<li class="uk-nav-divider"></li>
+								<li><a href="#">Cerrar Sesión</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
 
-<!-- MODAL SEARCH -->
-  <section id="modal-search" uk-modal>
-  <div class="uk-modal-body transparent">
-      <button class="uk-modal-close-default" type="button" uk-close></button>
-      <form class="uk-search uk-search-large uk-margin-large uk-align-center text-white">
-          <span uk-search-icon class="text-white"></span>
-          <input class="uk-search-input text-white" type="search" placeholder="Nueva aventura...">
-      </form>
-      <div class="uk-text-center uk-heading-line">
-        <h2 class="text-white">Recomendaciones del mes</h2>
-      </div>
-      <div id="buscar-tour" class="uk-child-width-1-3@m" uk-grid>
-      <div>
-  </div>
-</section>
+	<!-- MODAL SEARCH -->
+	<section id="modal-search" uk-modal>
+		<div class="uk-modal-body transparent">
+			<button class="uk-modal-close-default" type="button" uk-close></button>
+			<form class="uk-search uk-search-large uk-margin-large uk-align-center text-white">
+				<span uk-search-icon class="text-white"></span>
+				<input class="uk-search-input text-white" type="search" placeholder="Nueva aventura...">
+			</form>
+			<div class="uk-text-center uk-heading-line">
+				<h2 class="text-white">Recomendaciones del mes</h2>
+			</div>
+			<div id="buscar-tour" class="uk-child-width-1-3@m" uk-grid>
+				<div>
+				</div>
+	</section>
 
-<!--NAVBAR MOBILE -->
-  <section>
-  <div id="offcanvas-nav" uk-offcanvas="overlay: true">
-      <div class="uk-offcanvas-bar color-gray">
-          <div class="uk-text-center uk-margin-top">
-              <img class="uk-border-circle img-size-nav-mobile" src="../assets/img/avatar.jpg">
-          </div>
-          <ul class="uk-nav uk-nav-default uk-padding">
-              <li><a href="home.html"><span class="uk-margin-small-right" uk-icon="icon: home"></span>Inicio</a></li>
-              <li><a href="#modal-search" uk-toggle><span class="uk-margin-small-right" uk-icon="icon: search"></span>Buscar aventura</a></li>
-              <li class="uk-parent">
-                  <a href="#offcanvas-flip"><span class="uk-margin-small-right" uk-icon="icon: cog"></span>Configurar cuenta</a>
-              </li>
-              <li><a href="help.html"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Ayuda</a></li>
-              <li class="uk-margin-bottom">
-                  <a href="#footer">Contacto</a>
-              </li>
-          </ul>
-      </div>
-  </div>
-</section>
+	<!--NAVBAR MOBILE -->
+	<section>
+		<div id="offcanvas-nav" uk-offcanvas="overlay: true">
+			<div class="uk-offcanvas-bar color-gray">
+				<div class="uk-text-center uk-margin-top">
+					<img class="uk-border-circle img-size-nav-mobile" src="../assets/img/avatar.jpg">
+				</div>
+				<ul class="uk-nav uk-nav-default uk-padding">
+					<li><a href="home.html"><span class="uk-margin-small-right" uk-icon="icon: home"></span>Inicio</a></li>
+					<li><a href="#modal-search" uk-toggle><span class="uk-margin-small-right" uk-icon="icon: search"></span>Buscar aventura</a></li>
+					<li class="uk-parent">
+						<a href="#offcanvas-flip"><span class="uk-margin-small-right" uk-icon="icon: cog"></span>Configurar cuenta</a>
+					</li>
+					<li><a href="help.html"><span class="uk-margin-small-right" uk-icon="icon: info"></span>Ayuda</a></li>
+					<li class="uk-margin-bottom">
+						<a href="#footer">Contacto</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="uk-cover-container uk-height-medium">
+			<div style="position:relative;height:0;padding-bottom:56.25%" class="uk-cover"><iframe src="https://www.youtube.com/embed/PKuu9hUOrTU?rel=0&amp;controls=0&amp;showinfo=0?ecver=2?rel=0&autoplay=1" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+		</div>
+	</section>
+	<section class="uk-margin-large">
+		<div class=" uk-heading-line uk-text-center">
+			<h2 class=" uk-text-center uk-margin-remove-bottom text-gray">Recomendaciones cerca de tí</h2>
+		</div>
+		<div id="recomendaciones-tour" class="uk-child-width-1-3@m uk-padding-large" uk-grid>
 
-    <section class="home-container">
-        <ul class="slider-container">
-            <li class="item"><img src="../assets/img/mansiones-que-son-hoteles-01.jpg" alt=""></li>
-            <li class="item"><img  class="uk-hidden" src="../assets/img/vintage-nights-noche-retro-como-en-los-anos-30.jpg" alt=""></li>
-            <li class="item"><img  class="uk-hidden" src="../assets/img/Untitled-design-27.jpg" alt=""></li>
-        </ul>
-    </section>
-
-    <section class="uk-margin-large">
-      <div class=" uk-heading-line uk-text-center">
-        <h2 class=" uk-text-center uk-margin-remove-bottom text-gray">Recomendaciones cerca de tí</h2>
-      </div>
-      <div id="recomendaciones-tour" class="uk-child-width-1-3@m uk-padding-large" uk-grid>
-
-      </div>
-    </section>
+		</div>
+	</section>
 
 
-    <footer id="footer"class="color-gray container-footer">
-        <ul class="list-footer list-container">
-            <li class="text-white">Scapp</li>
-            <li><a href="" class="text-white">Home</a></li>
-            <li><a href="" class="text-white">¿Quienes Somos?</a></li>
-            <li><a href="#" class="text-white">¿Como funciona?</a></li>
-            <li><a href="#" class="text-white">Recibi un Kit</a></li>
-            <li><a href="#" class="text-white">Blog</a></li>
-        </ul>
-        <ul class="text-white">
-            <li class="text-white">SERVICIO AL CLIENTE</li>
-            <li><a class="text-white uk-text-meta">Preguntas Frecuentes</a></li>
-            <li><a class="text-white">Garantia de Servicio</a></li>
-            <li class="text-white uk-text-meta">POLITICAS</li>
-            <li><a class="text-white">Terminos y Condiciones</a></li>
-            <li><a class="text-white">Privacidad</a></li>
-        </ul>
-        <ul>
-            <li class="text-white">SOLUCIONES CORPORATIVAS</li>
-            <li><a href="" class="text-white">Regalos Corporativos</a></li>
-            <li><a href="" class="text-white">Cotiza tu iniciativa</a></li>
-            <li></li>
-        </ul>
-        <div>
-            <p class="text-white newsletter-container">Inscríbete a nuestro Newsletter para recibir grandes ideas...</p>
-            <input type="text">
-            <a href="#" class="uk-button uk-button-default button-style rss-btn uk-button-small">Suscríbete</a>
-            <div class="social-media">
-                <a href="" uk-icon="icon: twitter; ratio: 1.8"></a>
-                <a href="" uk-icon="icon: facebook; ratio: 1.8"></a>
-                <a href="" uk-icon="icon: linkedin; ratio: 1.8"></a>
-                <a href="" uk-icon="icon: youtube; ratio: 1.8"></a>
-                <a href="" uk-icon="icon: rss; ratio: 1.8"></a>
-            </div>
-            <div class="tel">
-                <span uk-icon="icon: phone"></span>
-                <span>5292 5707 / 01 55 5292-5407</span>
-            </div>
-        </div>
+	<footer id="footer" class="color-gray container-footer">
+		<ul class="list-footer list-container">
+			<li class="text-white">Scapp</li>
+			<li><a href="" class="text-white">Home</a></li>
+			<li><a href="" class="text-white">¿Quienes Somos?</a></li>
+			<li><a href="#" class="text-white">¿Como funciona?</a></li>
+			<li><a href="#" class="text-white">Recibi un Kit</a></li>
+			<li><a href="#" class="text-white">Blog</a></li>
+		</ul>
+		<ul class="text-white">
+			<li class="text-white">SERVICIO AL CLIENTE</li>
+			<li><a class="text-white uk-text-meta">Preguntas Frecuentes</a></li>
+			<li><a class="text-white">Garantia de Servicio</a></li>
+			<li class="text-white uk-text-meta">POLITICAS</li>
+			<li><a class="text-white">Terminos y Condiciones</a></li>
+			<li><a class="text-white">Privacidad</a></li>
+		</ul>
+		<ul>
+			<li class="text-white">SOLUCIONES CORPORATIVAS</li>
+			<li><a href="" class="text-white">Regalos Corporativos</a></li>
+			<li><a href="" class="text-white">Cotiza tu iniciativa</a></li>
+			<li></li>
+		</ul>
+		<div>
+			<p class="text-white newsletter-container">Inscríbete a nuestro Newsletter para recibir grandes ideas...</p>
+			<input type="text">
+			<a href="#" class="uk-button uk-button-default button-style rss-btn uk-button-small">Suscríbete</a>
+			<div class="social-media">
+				<a href="" uk-icon="icon: twitter; ratio: 1.8"></a>
+				<a href="" uk-icon="icon: facebook; ratio: 1.8"></a>
+				<a href="" uk-icon="icon: linkedin; ratio: 1.8"></a>
+				<a href="" uk-icon="icon: youtube; ratio: 1.8"></a>
+				<a href="" uk-icon="icon: rss; ratio: 1.8"></a>
+			</div>
+			<div class="tel">
+				<span uk-icon="icon: phone"></span>
+				<span>5292 5707 / 01 55 5292-5407</span>
+			</div>
+		</div>
 
-    </footer>
+	</footer>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -199,4 +196,5 @@
 	<script src="../js/search.js"></script>
 
 </body>
+
 </html>
