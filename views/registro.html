@@ -15,14 +15,14 @@
 <body class="uk-flex uk-flex-center registro-body">
   <div id="container-registro">
 	<section class="uk-grid uk-child-width-1-2 uk-flex-center">
-    <form class="margin-form">
-         <input type="text" placeholder="Name" class="uk-input"><br>
-         <input type="text" placeholder="Email" class="uk-input uk-margin-top"><br>
-         <input type="text" placeholder="Password" class="uk-input uk-margin-top">
-         <input type="text" placeholder="Confirme Password" class="uk-input uk-margin-top">
+    <form id="form" class="margin-form">
+         <input id="name" type="text" placeholder="Name" class="uk-input"><br>
+         <input id="email" type="email" placeholder="Email" class="uk-input uk-margin-top"><br>
+         <input id="password" type="text" placeholder="Password" class="uk-input uk-margin-top">
+         <input id="passConfirm"  type="text" placeholder="Confirme Password" class="uk-input uk-margin-top">
          <div>
            <a href="home.html">
-             <button class="uk-button color-green uk-width-1-1 uk-margin-small-bottom uk-margin-top text-white" > Continuar</button>
+             <button id="continue" type="submit" class="uk-button color-green uk-width-1-1 uk-margin-small-bottom uk-margin-top text-white" > Continuar</button>
           </a>
          </div>
     </form>
@@ -37,5 +37,6 @@
   <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
+	<script src="../js/registro.js"></script>
 </body>
 </html>
